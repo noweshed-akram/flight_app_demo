@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectDates">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/datebarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/dateBackBtnId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select Date"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dateDoneBtnId"
+        android:layout_below="@id/datebarId"
+        custom:disable_date_color="#ABABAB"
+        custom:range_color="@color/daterange"
+        custom:selected_date_circle_color="@color/buttonBg"
+        custom:title_color="@color/black" />
+
+    <Button
+        android:id="@+id/dateDoneBtnId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_bg3"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
